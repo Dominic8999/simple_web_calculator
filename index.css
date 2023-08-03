@@ -1,4 +1,17 @@
+#title {
+    margin: 40px;
+}
+
 #add_div {
     border-radius: 10px;
     border-style:inherit;
+    max-width: 600px;
+    margin: auto;
+    display: block;
+    padding: 20px;
+}
+
+#flex {
+    display: flex;
+    justify-content: space-evenly;
 }
