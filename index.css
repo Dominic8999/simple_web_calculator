@@ -1,7 +1,9 @@
 body {
     background-color: #222;
-    color: azure;
+    color: rgb(8, 138, 138);
 }
-.header-div {
-    background-color: #dfdfe2;
+
+#add_div {
+    border-radius: 10px;
+    border-style:inherit;
 }
