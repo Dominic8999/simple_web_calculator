@@ -1,5 +1,5 @@
 #title {
-    margin: 40px;
+    margin: 10px;
     color: orange;
     background-color: #dfdfe2;
 }
@@ -10,6 +10,12 @@ body {
     max-width: 100%;
     color: azure;
     height: 80vh;
+    transform: scale(0.9);
+}
+
+#p-1, #p-2, #p-3 {
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 h1 {
@@ -20,9 +26,9 @@ h1 {
     border-radius: 10px;
     border-style:inherit;
     max-width: 600px;
-    margin: auto;
+    margin: 10px auto;
     display: block;
-    padding: 20px;
+    padding: 10px;
 }
 
 #flex {
