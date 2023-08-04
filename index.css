@@ -12,6 +12,10 @@ body {
     height: 80vh;
 }
 
+h1 {
+    padding: 3px 0;
+}
+
 #add_div {
     border-radius: 10px;
     border-style:inherit;

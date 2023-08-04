@@ -7,36 +7,37 @@
     <link href="index.css" rel="stylesheet" type="text/css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> <!--Bootstrap imported right there-->
-    <script src="index.js"></script>
+    <script src="index.js"></script> <!--Imported JS file-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--Imported icons-->
 </head>
 <body>
     <header>
-        <div id="title" class="text-center">
+        <div id="title" class="text-center shadow-sm p-3 mb-5 bg-body-tertiary rounded">
             <h1>Simple Web Calc</h1>
         </div>
     </header>
     <main>
-        <figure id="add_div" class="bg-primary">
+        <figure id="add_div" class="bg-primary shadow-lg p-3 mb-5 body-tertiary rounded ">
             <h3 class="text-center">Numbers:</h3>
             <div id="flex">
                 <div>
                     <div class="text-center">
                         <p id="p-1">0</p>
                     </div>
-                    <button class="btn btn-primary btn-info" onclick="inc1()">Increase</button>
-                    <button class="btn btn-primary btn-danger" onclick="dec1()">Decrease</button>
+                    <button class="btn btn-primary btn-info" onclick="inc1()"><span class="bi bi-plus">Increase</span></button>
+                    <button class="btn btn-primary btn-warning" onclick="dec1()"><span class="bi bi-dash">Decrease</span></button>
                     <span style="display: flex; justify-content: center; align-items: center; height: 1cm;">
-                        <button class="btn btn-primary btn-success" onclick="reset1()">RESET</button>
+                        <button class="btn btn-primary btn-danger" onclick="reset1()"><span class="bi bi-trash3-fill">RESET</span></button>
                     </span>                    
                 </div>
                 <div>
                     <div class="text-center">
                         <p id="p-2">0</p>
                     </div>
-                    <button class="btn btn-primary btn-info" onclick="inc2()">Increase</button>
-                    <button class="btn btn-primary btn-danger" onclick="dec2()">Decrease</button>
+                    <button class="btn btn-primary btn-info" onclick="inc2()"><span class="bi bi-plus">Increase</span></button>
+                    <button class="btn btn-primary btn-warning" onclick="dec2()"><span class="bi bi-dash">Decrease</span></button>
                     <span style="display: flex; justify-content: center; align-items: center; height: 1cm;">
-                        <button class="btn btn-primary btn-success" onclick="reset2()">RESET</button>
+                        <button class="btn btn-primary btn-danger" onclick="reset2()"><span class="bi bi-trash3-fill">RESET</span></button>
                     </span> 
                 </div>
             </div>
