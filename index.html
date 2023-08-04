@@ -13,7 +13,7 @@
 <body>
     <header>
         <div id="title" class="text-center shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-            <h1>Simple Web Calc</h1>
+            <h1>Simple Calculator</h1>
         </div>
     </header>
     <main>
@@ -43,15 +43,16 @@
             </div>
             <div class="row justify-content-center">
                 <h3 class="text-center m-3 "><span>The result:</span></h3>
-                <p class="text-center justify-content-center" style="background-color: #dfdfe2; max-width: 50%;"><span id="p-3">0</span></p>
+                <span class="text-center justify-content-center" style="background-color: #dfdfe2; max-width: 50%;" id="p-3">0</span>
             </div>
             <div>
                 <h3 class="text-center m-3 "><span class="bi bi-plus-slash-minus"> Options:</span></h3>
                 <div class="row justify-content-center">
-                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group" style="max-width: 77%;">                                <button class="btn btn-success"><span class="bi bi-plus-circle"> add</span></button>
-                        <button class="btn" style="background-color:  #ad2a37 ;"><span class="bi bi-dash-circle"> subtract</span></button>
-                        <button class="btn" style="background-color: rgb(182, 20, 188);"><span class="bi bi-heartbreak"> divide</span></button>
-                        <button class="btn" style="background-color: rgb(216, 223, 17);"><span class="bi bi-emoji-kiss"> multiply</span></button>
+                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group" style="max-width: 77%;">                                
+                        <button class="btn btn-success" onclick="add()"><span class="bi bi-plus-circle"> add</span></button>
+                        <button class="btn" style="background-color:  #ad2a37 ;" onclick="substract()"><span class="bi bi-dash-circle"> subtract</span></button>
+                        <button class="btn" style="background-color: rgb(182, 20, 188);" onclick="divide()"><span class="bi bi-heartbreak"> divide</span></button>
+                        <button class="btn" style="background-color: rgb(216, 223, 17);" onclick="multiply()"><span class="bi bi-emoji-kiss"> multiply</span></button>
                     </div>
                 </div>
             </div>
