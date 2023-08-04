@@ -1,5 +1,15 @@
 #title {
     margin: 40px;
+    color: orange;
+    background-color: #dfdfe2;
+}
+body {
+    background: url(calc2.png);
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    color: azure;
+    height: 80vh;
 }
 
 #add_div {
