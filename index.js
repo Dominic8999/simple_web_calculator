@@ -14,82 +14,36 @@ function updateNumber(elementId, operation) {
   console.log("The number was updated");
 }
 
-function inc1() {
-  updateNumber("#p-1", "inc");
-}
+function operate(operation) {
+  const numEl1 = document.querySelector("#p-1");
+  const numEl2 = document.querySelector("#p-2");
+  const resultEl = document.querySelector("#p-3");
 
-function inc2() {
-  updateNumber("#p-2", "inc");
-}
+  const num1 = parseInt(numEl1.textContent);
+  const num2 = parseInt(numEl2.textContent);
 
-function dec1() {
-  updateNumber("#p-1", "dec");
-}
+  let result;
 
-function dec2() {
-  updateNumber("#p-2", "dec");
-}
-
-function reset1() {
-  updateNumber("#p-1", "reset");
-}
-
-function reset2() {
-  updateNumber("#p-2", "reset");
-}
-
-function add() {
-  let numEl1 = document.querySelector("#p-1");
-  let numEl2 = document.querySelector("#p-2");
-  let resultEl = document.querySelector("#p-3");
-
-  let num1 = parseInt(numEl1.textContent);
-  let num2 = parseInt(numEl2.textContent);
-
-  let result = num1 + num2;
-
+  switch (operation) {
+    case "add":
+      result = num1 + num2;
+      console.log("Numbers were added");
+      break;
+    case "subtract":
+      result = num1 - num2;
+      console.log("Numbers were subtracted");
+      break;
+    case "divide":
+      result = num1 / num2;
+      console.log("Numbers were divided");
+      break;
+    case "multiply":
+      result = num1 * num2;
+      console.log("Numbers were multiplied");
+      break;
+    default:
+      console.log("Invalid operation");
+      return;
+  }
   resultEl.textContent = result;  // Update the result paragraph
-  console.log("Numbers were added");
-}
-
-function substract() {
-  let numEl1 = document.querySelector("#p-1");
-  let numEl2 = document.querySelector("#p-2");
-  let resultEl = document.querySelector("#p-3");
-
-  let num1 = parseInt(numEl1.textContent);
-  let num2 = parseInt(numEl2.textContent);
-
-  let result = num1 - num2;
-
-  resultEl.textContent = result;  // Update the result paragraph
-  console.log("Numbers were added");
-}
-
-function divide() {
-  let numEl1 = document.querySelector("#p-1");
-  let numEl2 = document.querySelector("#p-2");
-  let resultEl = document.querySelector("#p-3");
-
-  let num1 = parseInt(numEl1.textContent);
-  let num2 = parseInt(numEl2.textContent);
-
-  let result = num1 / num2;
-
-  resultEl.textContent = result;  // Update the result paragraph
-  console.log("Numbers were added");
-}
-
-function multiply() {
-  let numEl1 = document.querySelector("#p-1");
-  let numEl2 = document.querySelector("#p-2");
-  let resultEl = document.querySelector("#p-3");
-
-  let num1 = parseInt(numEl1.textContent);
-  let num2 = parseInt(numEl2.textContent);
-
-  let result = num1 * num2;
-
-  resultEl.textContent = result;  // Update the result paragraph
-  console.log("Numbers were added");
 }

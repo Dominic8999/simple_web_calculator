@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Calcularor</title>
+    <title>Simple Web Calculator</title>
     <link href="index.css" rel="stylesheet" type="text/css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> <!--Bootstrap imported right there-->
-    <script src="index.js"></script> <!--Imported JS file-->
+    rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--Bootstrap imported right there-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--Imported icons-->
+    <script src="index.js"></script> <!--Imported JS file-->
 </head>
 <body>
     <header>
@@ -17,27 +18,27 @@
         </div>
     </header>
     <main>
-        <figure id="add_div" class="bg-primary shadow-lg p-3 mb-5 body-tertiary rounded ">
+        <figure id="add_div" class="bg-primary shadow-lg p-3 mb-5 body-tertiary rounded">
             <h3 class="text-center">Numbers:</h3>
             <div id="flex">
                 <div>
                     <div class="text-center">
                         <p id="p-1">0</p>
                     </div>
-                    <button class="btn btn-primary btn-info" onclick="inc1()"><span class="bi bi-plus">Increase</span></button>
-                    <button class="btn btn-primary btn-warning" onclick="dec1()"><span class="bi bi-dash">Decrease</span></button>
+                    <button class="btn btn-primary btn-info" onclick="updateNumber('#p-1', 'inc')"><span class="bi bi-plus">Increase</span></button>
+                    <button class="btn btn-primary btn-warning" onclick="updateNumber('#p-1', 'dec')"><span class="bi bi-dash">Decrease</span></button>
                     <span style="display: flex; justify-content: center; align-items: center; height: 1cm;">
-                        <button class="btn btn-primary btn-danger" onclick="reset1()"><span class="bi bi-trash3-fill">RESET</span></button>
+                        <button class="btn btn-primary btn-danger" onclick="updateNumber('#p-1', 'reset')"><span class="bi bi-trash3-fill">RESET</span></button>
                     </span>                    
                 </div>
                 <div>
                     <div class="text-center">
                         <p id="p-2">0</p>
                     </div>
-                    <button class="btn btn-primary btn-info" onclick="inc2()"><span class="bi bi-plus">Increase</span></button>
-                    <button class="btn btn-primary btn-warning" onclick="dec2()"><span class="bi bi-dash">Decrease</span></button>
+                    <button class="btn btn-primary btn-info" onclick="updateNumber('#p-2', 'inc')"><span class="bi bi-plus">Increase</span></button>
+                    <button class="btn btn-primary btn-warning" onclick="updateNumber('#p-2', 'dec')"><span class="bi bi-dash">Decrease</span></button>
                     <span style="display: flex; justify-content: center; align-items: center; height: 1cm;">
-                        <button class="btn btn-primary btn-danger" onclick="reset2()"><span class="bi bi-trash3-fill">RESET</span></button>
+                        <button class="btn btn-primary btn-danger" onclick="updateNumber('#p-2', 'reset')"><span class="bi bi-trash3-fill">RESET</span></button>
                     </span> 
                 </div>
             </div>
@@ -49,10 +50,10 @@
                 <h3 class="text-center m-3 "><span class="bi bi-plus-slash-minus"> Options:</span></h3>
                 <div class="row justify-content-center">
                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group" style="max-width: 77%;">                                
-                        <button class="btn btn-success" onclick="add()"><span class="bi bi-plus-circle"> add</span></button>
-                        <button class="btn" style="background-color:  #ad2a37 ;" onclick="substract()"><span class="bi bi-dash-circle"> subtract</span></button>
-                        <button class="btn" style="background-color: rgb(182, 20, 188);" onclick="divide()"><span class="bi bi-heartbreak"> divide</span></button>
-                        <button class="btn" style="background-color: rgb(216, 223, 17);" onclick="multiply()"><span class="bi bi-emoji-kiss"> multiply</span></button>
+                        <button class="btn btn-success" onclick="operate('add')"><span class="bi bi-plus-circle"> add</span></button>
+                        <button class="btn" style="background-color:  #ad2a37 ;" onclick="operate('subtract')"><span class="bi bi-dash-circle"> subtract</span></button>
+                        <button class="btn" style="background-color: rgb(182, 20, 188);" onclick="operate('divide')"><span class="bi bi-heartbreak"> divide</span></button>
+                        <button class="btn" style="background-color: rgb(216, 223, 17);" onclick="operate('multiply')"><span class="bi bi-emoji-kiss"> multiply</span></button>
                     </div>
                 </div>
             </div>
@@ -63,3 +64,4 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
+    
